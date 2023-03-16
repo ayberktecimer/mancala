@@ -35,6 +35,20 @@ Please check `docker-compose.yml`, `mancala_client/Dockerfile`, and `mancala_ser
         ```
             http://0.0.0.0:80
         ```
+6. Server side auto documentation is available at:
+        ```
+            http://http://0.0.0.0:80/docs
+        ```
+![Fast API Docs](./docs/fast_api_docs.png)
+## Game Play
+1. Start a new game by clicking the `Start Game` button.
+![Start Game](./docs/start_game.png)
+2. Click on a pit to make a move.
+![Make a Move](./docs/init_game_state.png)
+3. After several players moves, the game will be in mid game state.
+![Mid Game State](./docs/mid_game_state.png)
+4. The game will end when one of the players has no stones left in their pits.
+![End Game State](./docs/end_game_state.png)
 ## Running the Tests
 
 ### Prerequisites
@@ -75,6 +89,7 @@ To run the tests for the server side of the game, follow the steps below:
 
 ```
 mancala/
+├── docs/
 ├── mancala_client/
 │   ├── public/
 │   └── src/
@@ -83,7 +98,7 @@ mancala/
 │       │   ├── Pit/
 │       │   └── Store/
 │       └── services/
-└──── mancala_server/
+└── mancala_server/
     ├── exceptions/
     ├── game_engine/
     ├── models/
@@ -93,6 +108,7 @@ mancala/
     ├── static/
     └── tests/
 ```
+- `docs` directory contains the images used in this README file.
 - `mancala_client`: This directory contains the client-side code for the Mancala game. It contains the HTML, CSS, and JavaScript code that runs in the user's web browser.
 
   - `public`: This directory contains any static assets that the client code needs, such as images or fonts.
