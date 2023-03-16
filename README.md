@@ -47,9 +47,9 @@ Please check `docker-compose.yml`, `mancala_client/Dockerfile`, and `mancala_ser
 ![Help](./docs/help.png)
 3. Click on a pit to make a move.
 ![Make a Move](./docs/init_game_state.png)
-4After several players moves, the game will be in mid game state.
+4. After several players moves, the game will be in mid game state.
 ![Mid Game State](./docs/mid_game_state.png)
-5The game will end when one of the players has no stones left in their pits.
+5. The game will end when one of the players has no stones left in their pits.
 ![End Game State](./docs/end_game_state.png)
 ## Running the Tests
 
