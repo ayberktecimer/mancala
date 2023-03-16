@@ -8,9 +8,10 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
+
 @router.get("/get_rules")
 def get_rules():
-
+    """Get the rules of the game."""
     os.chdir(".")  # Go up one directory from working directory
     static_dir = os.path.join(os.getcwd(), "static")
     file_path = os.path.join(static_dir, 'game_rules.txt')

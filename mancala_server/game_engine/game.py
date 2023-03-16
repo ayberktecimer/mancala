@@ -11,8 +11,8 @@ games = {}
 
 
 def initialize_game():
-    """This method starts the game."""
-    # return game attributes as json
+    # This function initializes a game by creating two human players, a board, and a game object.
+    # The function returns the game state as a JSON object.
     global games
     factory = PlayerFactory()
     player_1 = factory.create_player("human", "Marco", 0)
@@ -36,6 +36,13 @@ def initialize_game():
 
 
 def make_move(move_info):
+    '''
+    This function makes a move in the game by updating the game state based on the move information provided.
+    The function prepares the items needed to make the move, moves the stones, calculates the score, and checks if the game is over.
+    The function returns a MoveResponse object that contains the updated game state.
+    :param move_info:
+    :return: MoveResponse
+    '''
     game_state = games.get(move_info.game_id)
     if not game_state:
         raise NotValidGameException(
@@ -72,6 +79,13 @@ def make_move(move_info):
 
 
 def check_game_over(game_state):
+    '''
+    This function checks if the game is over by checking if all holes are empty.
+    If all holes are empty, the function sets the game over flag to True and determines the winner.
+    The function returns a tuple containing the game over flag and the winner.
+    :param game_state:
+    :return: tuple
+    '''
     if check_all_holes_empty(game_state["game_id"]) != 0:
         game_state["game_over"] = True
         game_state["winner"] = get_winner(game_state)
@@ -80,6 +94,13 @@ def check_game_over(game_state):
 
 
 def check_all_holes_empty(game_id):
+    '''
+    This function checks if all holes are empty for a given game ID.
+    If all holes are empty on one player's side, the function returns the corresponding player (1 or 2).
+    If all holes are empty on both sides, the function returns 0.
+    :param game_id:
+    :return: int
+    '''
     game_state = games[game_id]
     for i in range(0, store_map[0]):
         if game_state["board"][i] != 0:
@@ -97,6 +118,14 @@ def check_all_holes_empty(game_id):
 
 
 def get_winner(game_state):
+    '''
+    This function determines the winner of the game by calculating the scores of both players and comparing them.
+    If player 1 has a higher score, the function returns player 1's name.
+    If player 2 has a higher score, the function returns player 2's name.
+    If the scores are tied, the function returns "Tie".
+    :param game_state: dict
+    :return: str
+    '''
     player_1_score, player_2_score = calculate_score(game_state)
     if player_1_score > player_2_score:
         return game_state["player_1"]
