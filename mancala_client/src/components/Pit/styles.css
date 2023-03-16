@@ -1,0 +1,32 @@
+
+.pit-container {
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  align-content: center;
+}
+
+.pit-container-disabled {
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.stone {
+  height: 10px;
+  width: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
