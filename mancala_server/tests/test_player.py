@@ -2,6 +2,7 @@ from game_engine.player import calculate_score
 
 
 def test_player_score():
+    """Test player score"""
     game_state = {
         "player_turn": 0,
         "board": [6, 6, 6, 6, 6, 6, 0, 6, 6, 6, 6, 6, 6, 0],

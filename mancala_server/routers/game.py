@@ -16,13 +16,14 @@ router = APIRouter(
 
 @router.get("/")
 def home():
+    """Redirect to the documentation."""
     response = RedirectResponse(url='/docs')
     return response
 
 
 @router.get("/initialize_game")
 def _initialize_game():
-
+    """Initialize a game."""
     try:
         return initialize_game()
 
@@ -33,6 +34,7 @@ def _initialize_game():
 
 @router.post("/make_move", response_model=MoveResponse)
 def _make_move(move_item: Move) -> JSONResponse:
+    """Make a move in a game."""
     try:
         move_response = make_move(move_item)
         return JSONResponse(content=move_response.dict(), status_code=200)

@@ -2,6 +2,7 @@ from game_engine.move import check_another_move, get_store_indexes, move_stones,
 
 
 def test_check_another_move():
+    """Test if the player has another move"""
     pit_index = 6
     player_store_index = 6
     assert check_another_move(pit_index, player_store_index) == True
@@ -11,6 +12,7 @@ def test_check_another_move():
 
 
 def test_get_store_indexes():
+    """Test get store indexes"""
     player = 0
     player_store_index, opposite_store_index = get_store_indexes(player)
     assert player_store_index == 6
@@ -23,6 +25,7 @@ def test_get_store_indexes():
 
 
 def test_prepare_move_items():
+    """Test prepare move items"""
     game_state = {
         "player_turn": 0,
         "board": [6, 6, 6, 6, 6, 6, 0, 6, 6, 6, 6, 6, 6, 0],
@@ -49,6 +52,7 @@ def test_prepare_move_items():
 
 
 def test_move_stones():
+    """Test move stones"""
     game_state = {
         "player_turn": 0,
         "board": [6, 6, 6, 6, 6, 6, 0, 6, 6, 6, 6, 6, 6, 0],
