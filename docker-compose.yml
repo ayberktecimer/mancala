@@ -1,0 +1,11 @@
+version: '1'
+
+services:
+  client:
+    build: ./mancala_client
+    ports:
+      - "3000:3000"
+  server:
+    build: ./mancala_server
+    ports:
+      - "80:80"
