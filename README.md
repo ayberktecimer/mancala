@@ -62,7 +62,7 @@ To run the tests for the server side of the game, follow the steps below:
 1. Navigate to the server directory:
     
     ```
-    cd mancala_game_server
+    cd mancala_server
    ```
 2. Create a virtual environment:
     
