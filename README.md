@@ -43,11 +43,13 @@ Please check `docker-compose.yml`, `mancala_client/Dockerfile`, and `mancala_ser
 ## Game Play
 1. Start a new game by clicking the `Start Game` button.
 ![Start Game](./docs/start_game.png)
-2. Click on a pit to make a move.
+2. Click `Help` to see the rules of the game.
+![Help](./docs/help.png)
+3. Click on a pit to make a move.
 ![Make a Move](./docs/init_game_state.png)
-3. After several players moves, the game will be in mid game state.
+4After several players moves, the game will be in mid game state.
 ![Mid Game State](./docs/mid_game_state.png)
-4. The game will end when one of the players has no stones left in their pits.
+5The game will end when one of the players has no stones left in their pits.
 ![End Game State](./docs/end_game_state.png)
 ## Running the Tests
 
